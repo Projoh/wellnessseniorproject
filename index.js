@@ -37,6 +37,11 @@ function fadeInAssessment(element) {
     fadeInPage(assessment_page);
 }
 
+function gotoHome(element) {
+    var home_page = $('#main-page');
+    fadeOutCurrentPage(element);
+    fadeInPage(home_page);
+}
 
 function goToCategory(element) {
     var categoryName = element.innerText;
@@ -62,6 +67,9 @@ function fadeOutCurrentPage(element) {
 
 function fadeInPage(page) {
     setTimeout(function () {
+        var container = page.children();
+        container.map(x => container[x].style.display = "block");
+        $(container[0]).children().map(x => $(container[x]).css("display", "block"));
         page.fadeIn(150);
     }, 200);
 }
