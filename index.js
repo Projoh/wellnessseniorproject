@@ -1,7 +1,12 @@
 function fadeOutHome() {
     var home_page = $('#main-page');
-    home_page.fadeOut(200);
+    home_page.fadeOut(150);
 }
+function fadeOutCategory() {
+    var doc = $('#category-page');
+    doc.fadeOut(150);
+}
+
 
 function fadeInCategory(categoryName) {
     var serverCall;
@@ -11,27 +16,52 @@ function fadeInCategory(categoryName) {
     var title_element = $('#category-title');
     var descr_element = $('#category-description');
     //set element data
-    doc.fadeIn(200);
+
+    fadeInPage(doc);
 }
 
-function fadeInAssessment(categoryName) {
-    var serverCall;
 
-    var documentResult;
-    var questions = documentResult.split("\n"); // Dont forget to remove empty questions
+function fadeInAssessment(element) {
+    // var serverCall;
+    //
+    // var documentResult;
+    //  var questions = documentResult.split("\n"); // Dont forget to remove empty questions
+    //
+    // for(var i = 0; i < 10 && i< questions.length; i++) {
+    //     var question_label_element  = $('#question-'+i+'-select');
+    //     question_label_element.innerText = questions[i];
+    // }
+
+    fadeOutCurrentPage(element);
     var assessment_page = $('#assessment-page');
-
-    for(var i = 0; i < 10 && i< questions.length; i++) {
-        var question_label_element  = $('#question-'+i+'-select');
-        question_label_element.innerText = questions[i];
-    }
-
-    assessment_page.fadeIn();
+    fadeInPage(assessment_page);
 }
+
 
 function goToCategory(element) {
     var categoryName = element.innerText;
 
-    fadeOutHome();
+    fadeOutCurrentPage(element);
     fadeInCategory(categoryName);
+}
+
+function goToResult(element) {
+    fadeOutCurrentPage(element);
+    var result_page = $('#result-page');
+    fadeInPage(result_page);
+}
+
+function fadeOutCurrentPage(element) {
+    var e = $(element);
+    var page = e.parentsUntil('.page');
+
+    page.fadeOut(150);
+}
+
+
+
+function fadeInPage(page) {
+    setTimeout(function () {
+        page.fadeIn(150);
+    }, 200);
 }

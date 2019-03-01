@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="pt-5">
-    <div id="main-page">
+    <div id="main-page" class="page">
         <div class="container">
             <h1 class="display-3 pt-1 pb-3 ">Wellness</h1>
             <p>
@@ -34,8 +34,8 @@
 
         </div>
     </div>
-    <div id="category-page">
-        <div class="container d-none">
+    <div id="category-page" style="display: none;" class="page">
+        <div class="container" >
             <h1 class="display-3 pt-1 pb-3" id="category-title">Organization</h1>
             <p id="category-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies, risus eu euismod finibus, lacus felis consectetur massa,
@@ -45,11 +45,11 @@
                 egestas. Aenean dapibus felis sit amet accumsan tincidunt. Vestibulum velit velit, ultricies a commodo ac, placerat sed nisl. Aliquam auctor ut arcu ac
                 bibendum. Fusce interdum nunc euismod magna iaculis porta. Etiam eleifend risus vitae mauris gravida, et commodo felis accumsan. Etiam et interdum purus.
             </p>
-            <button type="button" class="btn btn-primary btn-lg btn-block mb-2">Take Assessment</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block mb-2" onclick="fadeInAssessment(this)">Take Assessment</button>
         </div>
     </div>
-    <div id="assessment-page">
-        <div class="container d-none">
+    <div id="assessment-page" style="display: none;" class="page">
+        <div class="container">
             <h1 class="display-5 pt-1 pb-3 " id="assessment-title">Organization Assessment</h1>
             <p class="h5 pt-1 pb-3 " >On a scale of one to ten, please rate your stance on...</p>
             <label id="question-1-title">Question about wellness</label>
@@ -182,12 +182,12 @@
                 <option>9</option>
                 <option>10</option>
             </select>
-            <button type="button" class="btn btn-primary btn-lg btn-block mb-2 mt-3">Submit Assessment</button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block mb-2 mt-2">Cancel and Return</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block mb-2 mt-3" onclick="goToResult(this)">Submit Assessment</button>
+            <button type="button" class="btn btn-secondary btn-lg btn-block mb-2 mt-2" onclick="goToCategory(this)">Cancel and Return</button>
         </div>
     </div>
-    <div id="result-page">
-        <div class="container d-none">
+    <div id="result-page" style="display: none;" class="page">
+        <div class="container">
 
             <h1 class="display-3 pt-1 pb-3 " id="result-title">Organization</h1>
             <p class="h5 pt-1 pb-3 " >You've scored an <custom id="result-score">89</custom> out of 100</p>
@@ -206,18 +206,20 @@
 
 
 <!--Add buttons to initiate auth sequence and sign out-->
-<button id="authorize-button" style="display: none;">Authorize</button>
-<button id="signout-button" style="display: none;">Sign Out</button>
-<pre id="content"></pre>
+<div class="d-none">
+    <button id="authorize-button" style="display: none;">Authorize</button>
+    <button id="signout-button" style="display: none;">Sign Out</button>
+    <pre id="content" ></pre>
+</div>
 
 <script type="text/javascript">
     // Client ID and API key from the Developer Console
     var CLIENT_ID = '1049233702869-7b0j1hr6nj2r567sc8h9kmofheumk653.apps.googleusercontent.com'
-    var API_KEY = 'M7k7ba9vnWyeEnM3N2x54D4D';
+    var API_KEY = 'AIzaSyBUTsBGlkrwxrkCrQkBXNIAEV3dWsy0ZT4';
 
     // Array of API discovery doc URLs for APIs used by the quickstart
     var DISCOVERY_DOCS = [
-        'https://docs.googleapis.com/$discovery/rest?version=v1&key=M7k7ba9vnWyeEnM3N2x54D4D'];
+        'https://docs.googleapis.com/$discovery/rest?version=v1&key=AIzaSyBUTsBGlkrwxrkCrQkBXNIAEV3dWsy0ZT4'];
 
     // Authorization scopes required by the API; multiple scopes can be
     // included, separated by spaces.
