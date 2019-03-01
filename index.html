@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="pt-5">
-    <div class="main-page d-none">
+    <div id="main-page">
         <div class="container">
             <h1 class="display-3 pt-1 pb-3 ">Wellness</h1>
             <p>
@@ -25,7 +25,7 @@
                 bibendum. Fusce interdum nunc euismod magna iaculis porta. Etiam eleifend risus vitae mauris gravida, et commodo felis accumsan. Etiam et interdum purus.
             </p>
             <div class="button-group">
-                <button type="button" class="btn btn-primary btn-lg btn-block mb-2">Organization</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block mb-2" onclick="goToCategory(this)">Organization</button>
                 <button type="button" class="btn btn-primary btn-lg btn-block mb-2">Category 2</button>
                 <button type="button" class="btn btn-primary btn-lg btn-block mb-2">Category 3</button>
                 <button type="button" class="btn btn-primary btn-lg btn-block mb-2">Category 4</button>
@@ -34,8 +34,8 @@
 
         </div>
     </div>
-    <div class="category-page d-none">
-        <div class="container">
+    <div id="category-page">
+        <div class="container d-none">
             <h1 class="display-3 pt-1 pb-3 " id="category-title">Organization</h1>
             <p id="category-description">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies, risus eu euismod finibus, lacus felis consectetur massa,
@@ -48,8 +48,8 @@
             <button type="button" class="btn btn-primary btn-lg btn-block mb-2">Take Assessment</button>
         </div>
     </div>
-    <div class="assessment-page d-none">
-        <div class="container">
+    <div id="assessment-page">
+        <div class="container d-none">
             <h1 class="display-5 pt-1 pb-3 " id="assessment-title">Organization Assessment</h1>
             <p class="h5 pt-1 pb-3 " >On a scale of one to ten, please rate your stance on...</p>
             <label id="question-1-title">Question about wellness</label>
@@ -186,8 +186,8 @@
             <button type="button" class="btn btn-secondary btn-lg btn-block mb-2 mt-2">Cancel and Return</button>
         </div>
     </div>
-    <div class="result-page">
-        <div class="container">
+    <div id="result-page">
+        <div class="container d-none">
 
             <h1 class="display-3 pt-1 pb-3 " id="result-title">Organization</h1>
             <p class="h5 pt-1 pb-3 " >You've scored an <custom id="result-score">89</custom> out of 100</p>
@@ -201,9 +201,16 @@
 
 
 </div>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+        crossorigin="anonymous"></script>
 <script src="index.js"></script>
 </body>
 
