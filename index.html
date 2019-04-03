@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-<div class="pt-5">
-    <div id="main-page" class="page">
+<div class="pt-5 page" >
+    <div id="main-page" >
         <div class="container">
-            <h1 class="display-3 pt-1 pb-3 ">Wellness</h1>
-            <p>
+            <h1 class="display-3 pt-1 pb-3 moserver" id="big-title">Wellness</h1>
+            <p class="moserver" id="big-text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies, risus eu euismod finibus, lacus felis consectetur massa,
                 id consequat nibh velit vitae purus. Proin rhoncus velit eu fringilla pretium. Duis id nunc metus. Ut at malesuada nisi. Phasellus at leo nunc.
                 Mauris interdum lacus vitae nunc malesuada placerat. Sed viverra vestibulum ante, ac imperdiet sem blandit at. Nunc ac nibh erat. Quisque gravida,
@@ -25,295 +25,21 @@
                 bibendum. Fusce interdum nunc euismod magna iaculis porta. Etiam eleifend risus vitae mauris gravida, et commodo felis accumsan. Etiam et interdum purus.
             </p>
             <div class="button-group">
-                <button type="button" class="btn btn-primary btn-lg btn-block mb-2" onclick="goToCategory(this)">Organization</button>
-                <button type="button" class="btn btn-primary btn-lg btn-block mb-2">Category 2</button>
-                <button type="button" class="btn btn-primary btn-lg btn-block mb-2">Category 3</button>
-                <button type="button" class="btn btn-primary btn-lg btn-block mb-2">Category 4</button>
-                <button type="button" class="btn btn-primary btn-lg btn-block mb-2">Resources</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block mb-2 moserver" id="first-button" onclick="goToCategory(1)">Organization</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block mb-2 moserver" id="second-button" onclick="goToCategory(2)">Category 2</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block mb-2 moserver" id="third-button" onclick="goToCategory(3)">Category 3</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block mb-2 moserver" id="fourth-button" onclick="goToCategory(4)">Category 4</button>
+                <button type="button" class="btn btn-primary btn-lg btn-block mb-2 moserver" id="fifth-button" onclick="goToCategory(5)">Resources</button>
             </div>
 
         </div>
     </div>
-    <div id="category-page" style="display: none;" class="page">
-        <div class="container" >
-            <h1 class="display-3 pt-1 pb-3" id="category-title">Organization</h1>
-            <p id="category-description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies, risus eu euismod finibus, lacus felis consectetur massa,
-                id consequat nibh velit vitae purus. Proin rhoncus velit eu fringilla pretium. Duis id nunc metus. Ut at malesuada nisi. Phasellus at leo nunc.
-                Mauris interdum lacus vitae nunc malesuada placerat. Sed viverra vestibulum ante, ac imperdiet sem blandit at. Nunc ac nibh erat. Quisque gravida,
-                dolor id tempor placerat, tellus diam tincidunt elit, non fermentum orci dolor in sapien. Fusce condimentum eros eget purus luctus, eu vulputate nibh
-                egestas. Aenean dapibus felis sit amet accumsan tincidunt. Vestibulum velit velit, ultricies a commodo ac, placerat sed nisl. Aliquam auctor ut arcu ac
-                bibendum. Fusce interdum nunc euismod magna iaculis porta. Etiam eleifend risus vitae mauris gravida, et commodo felis accumsan. Etiam et interdum purus.
-            </p>
-            <button type="button" class="btn btn-primary btn-lg btn-block mb-2" onclick="fadeInAssessment(this)">Take Assessment</button>
-        </div>
-    </div>
-    <div id="assessment-page" style="display: none;" class="page">
-        <div class="container">
-            <h1 class="display-5 pt-1 pb-3 " id="assessment-title">Organization Assessment</h1>
-            <p class="h5 pt-1 pb-3 " >On a scale of one to ten, please rate your stance on...</p>
-            <label id="question-1-title">Question about wellness</label>
-            <select class="form-control" id="question-1-select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-            </select>
-            <label id="question-2-title" class="pt-2" class="pt-2">Question about wellness</label>
-            <select class="form-control" id="question-2-select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-            </select>
-            <label id="question-3-title" class="pt-2" class="pt-2">Question about wellness</label>
-            <select class="form-control" id="question-3-select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-            </select>
-            <label id="question-4-title" class="pt-2" class="pt-2">Question about wellness</label>
-            <select class="form-control" id="question-4-select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-            </select>
-            <label id="question-5-title" class="pt-2">Question about wellness</label>
-            <select class="form-control" id="question-5-select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-            </select>
-            <label id="question-6-title" class="pt-2">Question about wellness</label>
-            <select class="form-control" id="question-6-select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-            </select>
-            <label id="question-7-title" class="pt-2">Question about wellness</label>
-            <select class="form-control" id="question-7-select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-            </select>
-            <label id="question-8-title" class="pt-2">Question about wellness</label>
-            <select class="form-control" id="question-8-select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-            </select>
-            <label id="question-9-title" class="pt-2">Question about wellness</label>
-            <select class="form-control" id="question-9-select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-            </select>
-            <label id="question-10-title" class="pt-2">Question about wellness</label>
-            <select class="form-control" id="question-10-select">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-            </select>
-            <button type="button" class="btn btn-primary btn-lg btn-block mb-2 mt-3" onclick="goToResult(this)">Submit Assessment</button>
-            <button type="button" class="btn btn-secondary btn-lg btn-block mb-2 mt-2" onclick="goToCategory(this)">Cancel and Return</button>
-        </div>
-    </div>
-    <div id="result-page" style="display: none;" class="page">
-        <div class="container">
-
-            <h1 class="display-3 pt-1 pb-3 " id="result-title">Organization</h1>
-            <p class="h5 pt-1 pb-3 " >You've scored an <custom id="result-score">89</custom> out of 100</p>
-            <div class="d-flex justify-content-center">
-                <img class="center" src="600.jpeg"/>
-            </div>
-            <button type="button" class="btn btn-primary btn-lg btn-block mb-2 mt-3">See Resources</button>
-            <button type="button" class="btn btn-warning btn-lg btn-block mb-2 mt-3">Go back home</button>
-        </div>
-    </div>
-
 
 
 
 </div>
 
 
-<!--Add buttons to initiate auth sequence and sign out-->
-<div class="d-none">
-    <button id="authorize-button" style="display: none;">Authorize</button>
-    <button id="signout-button" style="display: none;">Sign Out</button>
-    <pre id="content" ></pre>
-</div>
-
-<script type="text/javascript">
-    // Client ID and API key from the Developer Console
-    var CLIENT_ID = '1049233702869-7b0j1hr6nj2r567sc8h9kmofheumk653.apps.googleusercontent.com'
-    var API_KEY = 'AIzaSyBUTsBGlkrwxrkCrQkBXNIAEV3dWsy0ZT4';
-
-    // Array of API discovery doc URLs for APIs used by the quickstart
-    var DISCOVERY_DOCS = [
-        'https://docs.googleapis.com/$discovery/rest?version=v1&key=AIzaSyBUTsBGlkrwxrkCrQkBXNIAEV3dWsy0ZT4'];
-
-    // Authorization scopes required by the API; multiple scopes can be
-    // included, separated by spaces.
-    var SCOPES = "https://www.googleapis.com/auth/documents.readonly";
-
-    var authorizeButton = document.getElementById('authorize-button');
-    var signoutButton = document.getElementById('signout-button');
-
-    /**
-     *  On load, called to load the auth2 library and API client library.
-     */
-    function handleClientLoad() {
-        gapi.load('client:auth2', initClient);
-    }
-
-    /**
-     *  Initializes the API client library and sets up sign-in state
-     *  listeners.
-     */
-    function initClient() {
-        gapi.client.init({
-            apiKey: API_KEY,
-            clientId: CLIENT_ID,
-            discoveryDocs: DISCOVERY_DOCS,
-            scope: SCOPES
-        }).then(function () {
-            // Listen for sign-in state changes.
-            gapi.auth2.getAuthInstance().isSignedIn.listen(updateSigninStatus);
-
-            // Handle the initial sign-in state.
-            updateSigninStatus(gapi.auth2.getAuthInstance().isSignedIn.get());
-            authorizeButton.onclick = handleAuthClick;
-            signoutButton.onclick = handleSignoutClick;
-        });
-    }
-
-    /**
-     *  Called when the signed in status changes, to update the UI
-     *  appropriately. After a sign-in, the API is called.
-     */
-    function updateSigninStatus(isSignedIn) {
-        if (isSignedIn) {
-            authorizeButton.style.display = 'none';
-            signoutButton.style.display = 'block';
-            printDocTitle();
-        } else {
-            authorizeButton.style.display = 'block';
-            signoutButton.style.display = 'none';
-        }
-    }
-
-    /**
-     *  Sign in the user upon button click.
-     */
-    function handleAuthClick(event) {
-        gapi.auth2.getAuthInstance().signIn();
-    }
-
-    /**
-     *  Sign out the user upon button click.
-     */
-    function handleSignoutClick(event) {
-        gapi.auth2.getAuthInstance().signOut();
-    }
-
-    /**
-     * Append a pre element to the body containing the given message
-     * as its text node. Used to display the results of the API call.
-     *
-     * @param {string} message Text to be placed in pre element.
-     */
-    function appendPre(message) {
-        var pre = document.getElementById('content');
-        var textContent = document.createTextNode(message + '\n');
-        pre.appendChild(textContent);
-    }
-
-    /**
-     * Prints the title of a sample doc:
-     * https://docs.google.com/document/d/195j9eDD3ccgjQRttHhJPymLJUCOUjs-jmwTrekvdjFE/edit
-     */
-    function printDocTitle() {
-        gapi.client.docs.documents.get({
-            documentId: '195j9eDD3ccgjQRttHhJPymLJUCOUjs-jmwTrekvdjFE'
-        }).then(function(response) {
-            var doc = response.result;
-            var title = doc.title;
-            appendPre('Document "' + title + '" successfully found.\n');
-        },function(response) {
-            appendPre('Error: ' + response.result.error.message);
-        });
-    }
-</script>
-<script async="" defer="" onload="this.onload=function(){};handleClientLoad()" onreadystatechange="if (this.readyState === 'complete') this.onload()" src="https://apis.google.com/js/api.js"></script>
 
 <script
         src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -325,7 +51,9 @@
         src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
         crossorigin="anonymous"></script>
-<script src="index.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<script src="js/index.js"></script>
+<script src="js/pageloader.js"></script>
 </body>
 
 

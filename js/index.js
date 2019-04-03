@@ -38,11 +38,12 @@ function fadeInAssessment(element) {
 }
 
 
-function goToCategory(element) {
-    var categoryName = element.innerText;
-
-    fadeOutCurrentPage(element);
-    fadeInCategory(categoryName);
+function goToCategory(number) {
+    var page = $('body').children('.page');
+    page.fadeOut(150);
+    setTimeout(function () {
+        window.location.href = "/wellnessseniorproject/category.html#" + number;
+    }, 140);
 }
 
 function goToResult(element) {
@@ -65,3 +66,6 @@ function fadeInPage(page) {
         page.fadeIn(150);
     }, 200);
 }
+
+
+// Pages possible: Home, category + #, assessment + #, assessmentresult + #
