@@ -51,6 +51,15 @@ function goToCategory(number) {
     }, 140);
 }
 
+function goToCredits() {
+    var page = $('body').children('.page');
+    page.fadeOut(150);
+    setTimeout(function () {
+        window.location.href = "/wellnessseniorproject/credits.html";
+    }, 140);
+
+}
+
 function goToResult(element) {
     fadeOutCurrentPage(element);
     var result_page = $('#result-page');

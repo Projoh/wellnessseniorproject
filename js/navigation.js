@@ -1,11 +1,20 @@
 var number = 1;
+
+
+
 jQuery(document).ready(function($) {
     lastlocation = 'index';
     if (location.hash == "" || location.hash == null || location.hash == "#!" || isNaN(location.hash)) {
         location.hash = "1";
     }
     number = location.hash;
+    fadeInCurrentPage();
 });
+
+function fadeInCurrentPage() {
+    var page = $('body').children('.page');
+    page.fadeIn(150);
+}
 
 function goToAssessment() {
     var page = $('body').children('.page');
