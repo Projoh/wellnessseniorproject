@@ -23,7 +23,7 @@ function goToAssessment() {
     var page = $('body').children('.page');
     page.fadeOut(150);
     setTimeout(function () {
-        window.location.href = "/wellnessseniorproject/assessment.html#" + number;
+        window.location.href = "/wellnessseniorproject/assessment.html" + number;
     }, 140);
 }
 
@@ -31,7 +31,7 @@ function goToCategory() {
     var page = $('body').children('.page');
     page.fadeOut(150);
     setTimeout(function () {
-        window.location.href = "/wellnessseniorproject/category.html#" + number;
+        window.location.href = "/wellnessseniorproject/category.html" + number;
     }, 140);
 }
 
@@ -39,7 +39,7 @@ function goToResult() {
     var page = $('body').children('.page');
     page.fadeOut(150);
     setTimeout(function () {
-        window.location.href = "/wellnessseniorproject/results.html#" + number;
+        window.location.href = "/wellnessseniorproject/results.html" + number;
     }, 140);
 }
 
