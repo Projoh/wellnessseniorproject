@@ -4,13 +4,14 @@ var number = 1;
 
 jQuery(document).ready(function($) {
     var pageName = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
+
+    fadeInCurrentPage();
     if(pageName == "credits.html")
         return;
     if (location.hash == "" || location.hash == null || location.hash == "#!" || isNaN(location.hash.substring(1))) {
         location.hash = "1";
     }
     number = location.hash;
-    fadeInCurrentPage();
 });
 
 function fadeInCurrentPage() {
