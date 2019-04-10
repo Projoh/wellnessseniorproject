@@ -1,0 +1,45 @@
+@mixin nth-children($points...) {
+  @each $point in $points {
+    &:nth-child(#{$point}) {
+      @content;
+    }
+  }
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+}
+.loading {
+     margin: 10px;
+     animation: pulse 1s infinite ease-in-out;
+  border: none !important;
+
+  p,h1,button,div,select {
+    @include nth-children(1, 5, 9) {
+      width: 80%;
+    }
+    @include nth-children(2, 6, 10) {
+      width: 50%;
+    }
+    @include nth-children(3, 7) {
+      width: 70%;
+    }
+    @include nth-children(4, 8) {
+      width: 30%;
+    }
+  }
+
+
+ }
+@keyframes pulse {
+    0% {
+        background-color: rgba(165, 165, 165, 0.1);
+    }
+    50% {
+        background-color: rgba(165, 165, 165, 0.3);
+    }
+    100% {
+        background-color: rgba(165, 165, 165, 0.1);
+    }
+}
+

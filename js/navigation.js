@@ -50,3 +50,11 @@ function goToHomePage() {
         window.location.href = "/wellnessseniorproject/index.html";
     }, 140);
 }
+
+function goToResources() {
+    var page = $('body').children('.page');
+    page.fadeOut(150);
+    setTimeout(function () {
+        window.location.href = "/wellnessseniorproject/resources.html" + number;
+    }, 140);
+}
