@@ -13,24 +13,17 @@ body {
      margin: 10px;
      animation: pulse 1s infinite ease-in-out;
   border: none !important;
-
-  p,h1,button,div,select {
-    @include nth-children(1, 5, 9) {
-      width: 80%;
-    }
-    @include nth-children(2, 6, 10) {
-      width: 50%;
-    }
-    @include nth-children(3, 7) {
-      width: 70%;
-    }
-    @include nth-children(4, 8) {
-      width: 30%;
-    }
-  }
-
-
  }
+h1.loading{
+  height: 5vh;
+  width: 40%;
+}
+p.loading {
+  height: 35vh;
+}
+button.loading {
+  height: 2.5vh;
+}
 @keyframes pulse {
     0% {
         background-color: rgba(165, 165, 165, 0.1);
