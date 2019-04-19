@@ -47,7 +47,7 @@ function goToCategory(number) {
     var page = $('body').children('.page');
     page.fadeOut(150);
     setTimeout(function () {
-        window.location.href = "/wellnessseniorproject/category.html#" + number;
+        window.location.href = "/category.html#" + number;
     }, 140);
 }
 
@@ -55,7 +55,7 @@ function goToCredits() {
     var page = $('body').children('.page');
     page.fadeOut(150);
     setTimeout(function () {
-        window.location.href = "/wellnessseniorproject/credits.html";
+        window.location.href = "../credits.html";
     }, 140);
 
 }

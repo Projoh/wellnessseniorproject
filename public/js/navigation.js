@@ -23,7 +23,7 @@ function goToAssessment() {
     var page = $('body').children('.page');
     page.fadeOut(150);
     setTimeout(function () {
-        window.location.href = "/wellnessseniorproject/assessment.html" + number;
+        window.location.href = "/assessment.html" + number;
     }, 140);
 }
 
@@ -31,7 +31,7 @@ function goToCategory() {
     var page = $('body').children('.page');
     page.fadeOut(150);
     setTimeout(function () {
-        window.location.href = "/wellnessseniorproject/category.html" + number;
+        window.location.href = "/category.html" + number;
     }, 140);
 }
 
@@ -39,7 +39,7 @@ function goToResult() {
     var page = $('body').children('.page');
     page.fadeOut(150);
     setTimeout(function () {
-        window.location.href = "/wellnessseniorproject/results.html" + number;
+        window.location.href = "/results.html" + number;
     }, 140);
 }
 
@@ -48,7 +48,7 @@ function submitNewResults() {
     storeAssessment();
     page.fadeOut(150);
     setTimeout(function () {
-        window.location.href = "/wellnessseniorproject/results.html" + number;
+        window.location.href = "/results.html" + number;
     }, 140);
 }
 
@@ -56,7 +56,7 @@ function goToHomePage() {
     var page = $('body').children('.page');
     page.fadeOut(150);
     setTimeout(function () {
-        window.location.href = "/wellnessseniorproject/index.html";
+        window.location.href = "../index.html";
     }, 140);
 }
 
@@ -64,7 +64,7 @@ function goToResources() {
     var page = $('body').children('.page');
     page.fadeOut(150);
     setTimeout(function () {
-        window.location.href = "/wellnessseniorproject/resources.html" + number;
+        window.location.href = "/resources.html" + number;
     }, 140);
 }
 function getCookie(cname) {
